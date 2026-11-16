@@ -1,0 +1,52 @@
+== Colonnes (ordre et noms) : schéma utilisé vs DDL spécification v1.7.0
+customer                 IDENTIQUE (18 colonnes)
+customer_address         IDENTIQUE (13 colonnes)
+customer_demographics    IDENTIQUE (9 colonnes)
+date_dim                 IDENTIQUE (28 colonnes)
+household_demographics   IDENTIQUE (5 colonnes)
+income_band              IDENTIQUE (3 colonnes)
+inventory                IDENTIQUE (4 colonnes)
+item                     IDENTIQUE (22 colonnes)
+item_marketprices        IDENTIQUE (6 colonnes)
+product_reviews          IDENTIQUE (8 colonnes)
+promotion                IDENTIQUE (19 colonnes)
+reason                   IDENTIQUE (3 colonnes)
+ship_mode                IDENTIQUE (6 colonnes)
+store                    IDENTIQUE (29 colonnes)
+store_returns            IDENTIQUE (20 colonnes)
+store_sales              IDENTIQUE (23 colonnes)
+time_dim                 IDENTIQUE (10 colonnes)
+warehouse                IDENTIQUE (14 colonnes)
+web_clickstreams         IDENTIQUE (6 colonnes)
+web_page                 IDENTIQUE (14 colonnes)
+web_returns              IDENTIQUE (24 colonnes)
+web_sales                IDENTIQUE (34 colonnes)
+web_site                 IDENTIQUE (26 colonnes)
+
+== Tailles des fichiers data/ vs tableau 2-1 (SF1)
+customer                 fichier= 13,279,063  spec SF1= 13,278,712  écart=+0.00%
+customer_address         fichier=  5,387,229  spec SF1=  5,387,229  écart=+0.00%
+customer_demographics    fichier= 77,753,083  spec SF1= 77,753,083  écart=+0.00%
+date_dim                 fichier= 15,395,800  spec SF1= 15,395,800  écart=+0.00%
+household_demographics   fichier=    155,100  spec SF1=    155,100  écart=+0.00%
+income_band              fichier=        327  spec SF1=        327  écart=+0.00%
+inventory                fichier=424,943,678  spec SF1=424,943,678  écart=+0.00%
+item                     fichier=  6,799,286  spec SF1=  6,790,524  écart=+0.13%
+item_marketprices        fichier=  4,201,170  spec SF1=  3,711,674  écart=+13.19%
+product_reviews          fichier= 56,355,389  spec SF1= 56,355,389  écart=+0.00%
+promotion                fichier=     46,396  spec SF1=     46,244  écart=+0.33%
+reason                   fichier=      3,105  spec SF1=      3,086  écart=+0.62%
+ship_mode                fichier=      1,220  spec SF1=      1,220  écart=+0.00%
+store                    fichier=      3,386  spec SF1=      3,380  écart=+0.18%
+store_returns            fichier=  4,337,400  spec SF1=  4,337,400  écart=+0.00%
+store_sales              fichier= 92,764,700  spec SF1= 92,764,700  écart=+0.00%
+time_dim                 fichier=  5,107,780  spec SF1=  5,107,780  écart=+0.00%
+warehouse                fichier=        584  spec SF1=        580  écart=+0.69%
+web_clickstreams         fichier=178,722,140  spec SF1=178,722,140  écart=+0.00%
+web_page                 fichier=      8,040  spec SF1=      8,040  écart=+0.00%
+web_returns              fichier=  5,383,513  spec SF1=  5,383,513  écart=+0.00%
+web_sales                fichier=133,790,574  spec SF1=133,791,863  écart=-0.00%
+web_site                 fichier=      8,838  spec SF1=      8,807  écart=+0.35%
+TOTAL                    fichier=1,024,447,801  spec SF1=1,023,950,269  écart=+0.05%
+
+RÉSULTAT : noms de colonnes conformes à la spécification

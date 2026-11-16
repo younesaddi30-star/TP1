@@ -1,0 +1,19 @@
+graph GOLD {
+  layout=neato; overlap=false; splines=true; sep="+12";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=9];
+  edge [color="#7F7F7F"];
+  FV [label="FAIT_VENTES\ngrain : 1 ligne de ticket / commande\ncanal (magasin | web), n° transaction\nquantité, prix catalogue, remise, coupon\nCA net HT, taxe, coût, marge, lot", fillcolor="#FFE699", pos="0,0!"];
+  FR [label="FAIT_RETOURS\ngrain : 1 article retourné\ndate de retour + date de vente\nquantité, montant, motif", fillcolor="#FFE699", pos="5.2,0!"];
+  FS [label="FAIT_STOCK_HEBDO\ngrain : produit × entrepôt × semaine\nquantité en stock (snapshot)\npartage DIM_DATE et DIM_PRODUIT", fillcolor="#FFE699", pos="0,-3.3!"];
+  DD [label="DIM_DATE\njour, mois, trimestre, année", fillcolor="#DDEBF7", pos="-3.8,1.9!"];
+  DP [label="DIM_PRODUIT\ncatégorie, classe, marque, prix", fillcolor="#DDEBF7", pos="0,2.6!"];
+  DC [label="DIM_CLIENT (pseudonymisé)\nâge, genre, foyer, revenu, État", fillcolor="#DDEBF7", pos="3.6,2.6!"];
+  DL [label="DIM_LIEU\n12 magasins + 30 sites web", fillcolor="#DDEBF7", pos="-4.3,-0.6!"];
+  DPR [label="DIM_PROMOTION", fillcolor="#DDEBF7", pos="-3.6,-2.0!"];
+  DM [label="DIM_MOTIF_RETOUR\n(code seul)", fillcolor="#DDEBF7", pos="6.3,-1.8!"];
+  DE [label="DIM_ENTREPOT\n5 entrepôts", fillcolor="#DDEBF7", pos="3.6,-3.3!"];
+  DH [label="DIM_HEURE", fillcolor="#DDEBF7", pos="-3.2,3.2!"];
+  FV -- DD; FV -- DP; FV -- DC; FV -- DL; FV -- DPR; FV -- DH;
+  FR -- DP; FR -- DC; FR -- DM; FR -- DD; FR -- FV [style=dashed];
+  FS -- DE;
+}
